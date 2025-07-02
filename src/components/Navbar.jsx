@@ -1,4 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
+import logoImage from '/logo-drip-Ri.png';
 
 export default function Navbar() {
     const location = useLocation();
@@ -9,7 +10,7 @@ export default function Navbar() {
             
             <Link to="/">
             <img
-                src={`${import.meta.env.BASE_URL}logo-drip-Ri.png`}
+                src={logoImage}
                 alt="RI Platform"
                 className="w-[75px] h-[75px] object-contain"
             />
