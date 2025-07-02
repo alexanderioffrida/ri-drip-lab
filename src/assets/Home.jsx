@@ -5,23 +5,23 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 export default function Home() {
-    const [activeImage, setActiveImage] = useState('/default-image.png')
+    const [activeImage, setActiveImage] = useState(`${import.meta.env.BASE_URL}default-image.png`)
 
     const features = [
         {
             title: "Peer-to-Peer Mentorship",
             description: "Review research papers, posters, and projects with other students. The Ri Platform nurtures a community of peers who are eager to receive and provide feedback on research, and who are eager to help advance all fields of study.",
-            image: "/peer-to-peer-mentorship.png",
+            image: `${import.meta.env.BASE_URL}peer-to-peer-mentorship.png`,
         },
         {
             title: "Finding Opportunities",
             description: "Find research opportunities, internships, and academic or industry jobs. The Ri Platform is a hub for undergraduate research, and we connect students with opportunities to showcase their work and gain real-world experience.",
-            image: "/feature2.png",
+            image: `${import.meta.env.BASE_URL}feature2.png`,
         },
         {
             title: "Receiving Graduate School Advice",
             description: "Talk with graduate students for admissions advice and research pathways. The Ri Platform offers multiple avenues for students to connect with graduate students and to receive advice on their research and future career paths.",
-            image: "/graduate-school-advice.jpg",
+            image: `${import.meta.env.BASE_URL}graduate-school-advice.jpg`,
         },
     ];
     
@@ -30,7 +30,7 @@ export default function Home() {
             {/* Hero Section with Background Image */}
             <section
                 className="relative flex flex-col items-center justify-center text-center h-screen bg-cover bg-center"
-                style={{ backgroundImage: "url('/ri-platform-bg.jpg')" }}
+                style={{ backgroundImage: `url('${import.meta.env.BASE_URL}ri-platform-bg.jpg')` }}
             >
                 <div className="absolute inset-0 bg-black/50 z-0"></div>
                 
@@ -135,7 +135,7 @@ export default function Home() {
                             key={index}
                             className="cursor-pointer group/feature transition-colors"
                             onMouseEnter={() => setActiveImage(feature.image)}
-                            onMouseLeave={() => setActiveImage('/default-image.png')}
+                            onMouseLeave={() => setActiveImage(`${import.meta.env.BASE_URL}default-image.png`)}
                         >
                             <h2 className={`
                                 text-3xl font-medium transition-colors
