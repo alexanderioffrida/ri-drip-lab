@@ -9,7 +9,7 @@ export default function Navbar() {
             
             <Link to="/">
             <img
-                src="/logo-drip-Ri.png"
+                src={`${import.meta.env.BASE_URL}logo-drip-Ri.png`}
                 alt="RI Platform"
                 className="w-[75px] h-[75px] object-contain"
             />
